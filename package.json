@@ -1,7 +1,7 @@
 {
   "name": "interf",
   "version": "2.0.0",
-  "description": "The Interf CLI — agent readiness protocol toolkit for enterprise environments",
+  "description": "Open toolkit for agent readiness in enterprise — extract dependencies, simulate deployments, produce readiness contracts",
   "type": "module",
   "bin": {
     "interf": "dist/bin.js"
