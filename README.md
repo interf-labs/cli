@@ -1,15 +1,15 @@
 # interf
 
-The open toolkit for agent readiness in enterprise. Check if your AI agent is ready for enterprise deployment in 5 minutes.
+The standard interface for agent readiness in enterprise.
 
-Interf helps vendor teams responsible for enterprise deployments extract their agent's dependencies, simulate readiness against enterprise profiles, and produce a deployment contract — all from inside your coding agent.
+Interf provides an open-source toolkit for vendor teams to extract their agent's dependencies, simulate readiness against enterprise profiles, and produce a deployment contract — all from inside your coding agent. Check enterprise readiness in 5 minutes.
 
 ## Quick Start
 
 Tell your coding agent:
 
 ```
-use npx interf to create a readiness spec for this agent for Goldman Sachs deployment
+use npx interf to create a readiness spec for Nike deployment
 ```
 
 That's it. Your coding agent will install the skills, scan your codebase, extract an `interf.yaml` manifest, and simulate enterprise readiness — all in one flow.
