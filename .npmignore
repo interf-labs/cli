@@ -1,0 +1,10 @@
+src/
+**/*.spec.ts
+**/*.spec.js
+**/*.spec.d.ts
+**/*.spec.js.map
+vitest.config.ts
+tsconfig.json
+.github/
+.gitignore
+CLAUDE.md
