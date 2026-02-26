@@ -1,6 +1,6 @@
 {
   "name": "interf",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Open toolkit for agent readiness in enterprise — extract dependencies, simulate deployments, produce readiness contracts",
   "type": "module",
   "bin": {
