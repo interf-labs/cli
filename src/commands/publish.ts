@@ -9,7 +9,7 @@ export const publishCommand: CommandModule = {
     console.log(chalk.yellow("  Publish is coming soon."));
     console.log(
       chalk.dim(
-        "  This will publish your interf.yaml manifest to the Interf registry,",
+        "  This will publish your interf.yaml onboarding contract to the Interf registry,",
       ),
     );
     console.log(

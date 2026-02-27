@@ -18,7 +18,7 @@ export const defaultCommand: CommandModule = {
     }),
   handler: async (argv) => {
     console.log();
-    console.log(chalk.bold("  Interf") + " — Agent Readiness Protocol");
+    console.log(chalk.bold("  Interf") + " — Agent Onboarding Protocol");
     console.log();
 
     const agents = detectAgents(undefined, argv.agent as string[] | undefined);
@@ -65,20 +65,20 @@ export const defaultCommand: CommandModule = {
     console.log();
     console.log(chalk.bold("  Skills:"));
     console.log(
-      "  interf-scan         Scan codebase and extract interf.yaml",
+      "  interf-scan         Scan codebase and extract onboarding contract",
     );
     console.log(
-      "  interf-simulate     Run Flight Simulation for enterprise profiles",
+      "  interf-simulate     Preview enterprise deployment",
     );
     console.log(
-      "  interf-protocol     Agent Readiness Protocol reference",
+      "  interf-protocol     Agent Onboarding Protocol reference",
     );
     console.log();
     console.log(chalk.bold("  Commands:"));
     console.log("  interf validate         Validate interf.yaml");
     console.log("  interf install-skill    Reinstall skills");
     console.log("  interf login            Authenticate (coming soon)");
-    console.log("  interf publish          Publish manifest (coming soon)");
+    console.log("  interf publish          Publish contract (coming soon)");
     console.log("  interf simulate         Cloud simulation (coming soon)");
     console.log();
     console.log(chalk.dim("  https://interf.com"));

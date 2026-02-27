@@ -12,7 +12,7 @@ export const validateCommand: CommandModule = {
       alias: "f",
       type: "string",
       default: "interf.yaml",
-      describe: "Path to manifest file",
+      describe: "Path to onboarding contract file",
     }),
   handler: async (argv) => {
     const file = argv.file as string;
@@ -35,7 +35,7 @@ export const validateCommand: CommandModule = {
     if (result.success) {
       const m = result.data;
       console.log();
-      console.log(chalk.green("  ✓ Valid manifest"));
+      console.log(chalk.green("  ✓ Valid onboarding contract"));
       console.log();
       console.log(`  Name:          ${m.name}`);
       console.log(`  Version:       ${m.version}`);
