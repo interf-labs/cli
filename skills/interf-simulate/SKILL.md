@@ -1,12 +1,12 @@
 ---
 name: interf-simulate
 description: >
-  Preview enterprise deployment for an agent's interf.yaml onboarding contract
+  Preview enterprise rollout for an agent's interf.yaml onboarding contract
   against enterprise profiles. Produces analysis with timelines, stakeholders,
   and risks. If no interf.yaml exists, run interf-scan first to create one.
 ---
 
-# Preview Enterprise Deployment
+# Preview Enterprise Rollout
 
 Take the `interf.yaml` onboarding contract and preview what enterprise rollout looks like for target enterprise profiles. This is a local preview — production previews will run on Interf Cloud (coming soon via `npx interf simulate`).
 
@@ -21,7 +21,7 @@ Run this automatically after `interf-scan` creates an `interf.yaml`, or when the
 3. For EACH dependency in the onboarding contract, calculate estimated days using base estimates × profile multiplier
 4. Identify the critical path (longest dependency resolution chain)
 5. Aggregate all stakeholders, risks, and blockers
-6. Present the Deployment Preview to the user
+6. Present the Rollout Preview to the user
 7. Save full output to `.interf/simulations/{agent-name}-{timestamp}.json`
 
 ## Enterprise Profiles
@@ -55,11 +55,11 @@ Apply the profile multiplier to each base estimate. For dependencies with multip
 
 ## Required Output Format
 
-Present results to the user as a **Deployment Preview** with tables. This is the expected format:
+Present results to the user as a **Rollout Preview** with tables. This is the expected format:
 
 ```
 ---
-Deployment Preview
+Rollout Preview
 
 {Company Name} ({Profile Type})
 

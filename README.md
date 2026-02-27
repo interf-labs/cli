@@ -20,7 +20,7 @@ Works with Claude Code, Codex, Cursor, and Goose.
 
 1. **Scan** — Your coding agent analyzes your codebase and extracts every enterprise dependency: APIs, databases, auth providers, secrets, compliance requirements, and approval workflows.
 2. **Contract** — Dependencies are written to `interf.yaml`, a machine-readable onboarding contract between vendor and enterprise.
-3. **Preview** — A deployment preview runs against the target enterprise profile — timelines, stakeholders, risks, blockers, and critical path to production.
+3. **Preview** — A rollout preview runs against the target enterprise profile — timelines, stakeholders, risks, blockers, and critical path to production.
 
 ## interf.yaml
 
