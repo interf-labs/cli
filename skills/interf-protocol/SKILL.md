@@ -1,18 +1,18 @@
 ---
 name: interf-protocol
 description: >
-  The Agent Readiness Protocol specification. Teaches the interf.yaml schema,
+  The Agent Onboarding Protocol specification. Teaches the interf.yaml schema,
   dependency types, and how to declare what AI agents need from enterprise
-  environments.
+  environments to onboard.
 ---
 
-# Interf Protocol — Agent Readiness Specification
+# Interf Protocol — Agent Onboarding Specification
 
 ## Overview
 
-The Agent Readiness Protocol is an open standard for declaring what AI agents need from enterprise environments to be ready for deployment. Requirements are specified in an `interf.yaml` manifest — a machine-readable contract that covers APIs, authentication, compliance, approvals, and every other dependency an agent has on its target environment.
+The Agent Onboarding Protocol is an open standard for declaring what AI agents need from enterprise environments to onboard. Requirements are specified in an `interf.yaml` onboarding contract — a machine-readable contract that covers APIs, authentication, compliance, approvals, and every other dependency an agent has on its target environment.
 
-The manifest bridges the gap between "works in dev" and "deployed in production" by making enterprise requirements explicit, simulatable, and verifiable.
+The onboarding contract bridges the gap between "works in dev" and "deployed in production" by making enterprise requirements explicit, previewable, and verifiable.
 
 **Vendors define it. Enterprises resolve it. Agents verify it.**
 

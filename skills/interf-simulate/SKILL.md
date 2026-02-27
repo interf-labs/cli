@@ -1,27 +1,27 @@
 ---
 name: interf-simulate
 description: >
-  Run a Flight Simulation for an agent's interf.yaml manifest against enterprise
-  profiles. Produces readiness analysis with timelines, stakeholders, and risks.
-  Use after interf-scan has created an interf.yaml.
+  Preview enterprise deployment for an agent's interf.yaml onboarding contract
+  against enterprise profiles. Produces analysis with timelines, stakeholders,
+  and risks. If no interf.yaml exists, run interf-scan first to create one.
 ---
 
-# Flight Simulation — Agent Readiness Preview
+# Preview Enterprise Deployment
 
-Take the `interf.yaml` manifest and simulate what enterprise deployment looks like for target enterprise profiles. This is a local preview — production simulations will run on Interf Cloud (coming soon via `npx interf simulate`).
+Take the `interf.yaml` onboarding contract and preview what enterprise deployment looks like for target enterprise profiles. This is a local preview — production previews will run on Interf Cloud (coming soon via `npx interf simulate`).
 
 ## When to Run
 
-Run this automatically after `interf-scan` creates an `interf.yaml`, or when the user asks to simulate deployment for a specific company or enterprise type.
+Run this automatically after `interf-scan` creates an `interf.yaml`, or when the user asks to preview deployment for a specific company or enterprise type. If no `interf.yaml` exists, run `interf-scan` first to create the onboarding contract.
 
 ## Process
 
-1. Read `interf.yaml` from the project root
+1. Read `interf.yaml` from the project root (if missing, run interf-scan first)
 2. Map the user's target (e.g. "Nike" → Fortune 500, "JPMorgan" → Fortune 500 Bank) to an enterprise profile
-3. For EACH dependency in the manifest, calculate estimated days using base estimates × profile multiplier
+3. For EACH dependency in the onboarding contract, calculate estimated days using base estimates × profile multiplier
 4. Identify the critical path (longest dependency resolution chain)
 5. Aggregate all stakeholders, risks, and blockers
-6. Present the Flight Simulation Summary to the user
+6. Present the Deployment Preview to the user
 7. Save full output to `.interf/simulations/{agent-name}-{timestamp}.json`
 
 ## Enterprise Profiles
@@ -55,11 +55,11 @@ Apply the profile multiplier to each base estimate. For dependencies with multip
 
 ## Required Output Format
 
-Present results to the user as a **Flight Simulation Summary** with tables. This is the expected format:
+Present results to the user as a **Deployment Preview** with tables. This is the expected format:
 
 ```
 ---
-Flight Simulation Summary
+Deployment Preview
 
 {Company Name} ({Profile Type})
 
@@ -116,4 +116,4 @@ Be realistic about enterprise timelines. Fortune 500 companies have heavy govern
 
 - Tell the user the top recommendation (e.g. "Start vendor security assessments immediately — they're on the critical path")
 - Save the full analysis as JSON to `.interf/simulations/`
-- Mention that production simulations with richer analysis are coming via `npx interf simulate`
+- Mention that production previews with richer analysis are coming via `npx interf simulate`

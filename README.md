@@ -1,30 +1,30 @@
 # interf
 
-The standard interface for agent readiness in enterprise.
+The unified interface for agent onboarding in enterprise.
 
-Interf provides an open-source toolkit for vendor teams to extract their agent's dependencies, simulate readiness against enterprise profiles, and produce a deployment contract — all from inside your coding agent. Check enterprise readiness in 5 minutes.
+Interf provides an open-source toolkit for vendor teams to create an onboarding contract for their agent, preview enterprise deployments, and publish to the registry — all from inside your coding agent. Preview onboarding in 5 minutes.
 
 ## Quick Start
 
 Tell your coding agent:
 
 ```
-use npx interf to create a readiness spec for Nike deployment
+use npx interf to create an onboarding contract and preview Nike deployment
 ```
 
-That's it. Your coding agent will install the skills, scan your codebase, extract an `interf.yaml` manifest, and simulate enterprise readiness — all in one flow.
+That's it. Your coding agent will install the skills, scan your codebase, extract an `interf.yaml` onboarding contract, and preview what deployment looks like at Nike — all in one flow.
 
 Works with Claude Code, Codex, Cursor, and Goose.
 
 ## What Happens
 
 1. **Scan** — Your coding agent analyzes your codebase and extracts every enterprise dependency: APIs, databases, auth providers, secrets, compliance requirements, and approval workflows.
-2. **Manifest** — Dependencies are written to `interf.yaml`, a machine-readable contract between vendor and enterprise.
-3. **Simulate** — A flight simulation runs against the target enterprise profile — timelines, stakeholders, risks, blockers, and critical path to production.
+2. **Contract** — Dependencies are written to `interf.yaml`, a machine-readable onboarding contract between vendor and enterprise.
+3. **Preview** — A deployment preview runs against the target enterprise profile — timelines, stakeholders, risks, blockers, and critical path to production.
 
 ## interf.yaml
 
-The manifest declares everything your agent needs from an enterprise to be ready:
+The onboarding contract declares everything your agent needs from an enterprise:
 
 ```yaml
 name: crm-automation-agent
@@ -82,12 +82,12 @@ interf                  Install skills and show status
 interf validate         Validate interf.yaml against the protocol schema
 interf install-skill    Reinstall or manage skills
 interf login            Authenticate with interf.com (coming soon)
-interf publish          Publish manifest to registry (coming soon)
+interf publish          Publish onboarding contract to registry (coming soon)
 ```
 
 ## How It Works
 
-Interf installs skills to your coding agent — structured prompts that teach it the Agent Readiness Protocol. No API keys. No network calls. No code execution. The intelligence comes from your coding agent; Interf gives it the domain knowledge.
+Interf installs skills to your coding agent — structured prompts that teach it the Agent Onboarding Protocol. No API keys. No network calls. No code execution. The intelligence comes from your coding agent; Interf gives it the domain knowledge.
 
 Skills are installed to agent-specific directories and are automatically available in all projects:
 

@@ -1,13 +1,14 @@
 ---
 name: interf-scan
 description: >
-  Scan a codebase and extract an interf.yaml manifest declaring all enterprise
-  dependencies. Use when the user wants to create their agent readiness manifest.
+  Scan a codebase and extract an interf.yaml onboarding contract declaring all
+  enterprise dependencies. Use when the user wants to create their agent's
+  onboarding contract.
 ---
 
-# Scan Codebase — Extract interf.yaml
+# Scan Codebase — Extract Onboarding Contract
 
-Scan this project and extract an `interf.yaml` manifest declaring every external dependency this agent/tool needs from enterprise environments.
+Scan this project and extract an `interf.yaml` onboarding contract declaring every external dependency this agent/tool needs from enterprise environments.
 
 ## Process
 
@@ -63,15 +64,15 @@ Scan this project and extract an `interf.yaml` manifest declaring every external
 - **high**: PII access, financial data, or broad write permissions
 - **critical**: Healthcare data, payment processing, or admin-level access
 
-### Step 4: Write the Manifest
+### Step 4: Write the Onboarding Contract
 Write `interf.yaml` to the project root. Include clear descriptions for each dependency explaining WHY it's needed, not just what it is.
 
 ### Step 5: Validate
-After writing, run `npx interf validate` to check the manifest against the schema.
+After writing, run `npx interf validate` to check the onboarding contract against the schema.
 
 ### Step 6: Summarize
 Tell the user:
 - Total dependencies found by type
 - Risk level assessment with justification
 - Any dependencies that might be missing (suggest review)
-- Next steps: `npx interf validate`, then `npx interf simulate` (coming soon), then `npx interf publish` (coming soon)
+- Next steps: review the contract, then preview enterprise deployment (e.g. "use npx interf to preview onboarding for Nike")

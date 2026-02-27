@@ -1,7 +1,7 @@
 {
   "name": "interf",
   "version": "2.0.2",
-  "description": "Open toolkit for agent readiness in enterprise — extract dependencies, simulate deployments, produce readiness contracts",
+  "description": "The unified interface for agent onboarding in enterprise — create onboarding contracts, preview deployments, publish to registry",
   "type": "module",
   "bin": {
     "interf": "dist/bin.js"
@@ -27,7 +27,7 @@
   "keywords": [
     "interf",
     "agent",
-    "readiness",
+    "onboarding",
     "protocol",
     "ai",
     "enterprise",
