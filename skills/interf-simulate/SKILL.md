@@ -8,11 +8,11 @@ description: >
 
 # Preview Enterprise Deployment
 
-Take the `interf.yaml` onboarding contract and preview what enterprise deployment looks like for target enterprise profiles. This is a local preview — production previews will run on Interf Cloud (coming soon via `npx interf simulate`).
+Take the `interf.yaml` onboarding contract and preview what enterprise rollout looks like for target enterprise profiles. This is a local preview — production previews will run on Interf Cloud (coming soon via `npx interf simulate`).
 
 ## When to Run
 
-Run this automatically after `interf-scan` creates an `interf.yaml`, or when the user asks to preview deployment for a specific company or enterprise type. If no `interf.yaml` exists, run `interf-scan` first to create the onboarding contract.
+Run this automatically after `interf-scan` creates an `interf.yaml`, or when the user asks to preview rollout for a specific company or enterprise type. If no `interf.yaml` exists, run `interf-scan` first to create the onboarding contract.
 
 ## Process
 

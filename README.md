@@ -2,17 +2,17 @@
 
 The unified interface for agent onboarding in enterprise.
 
-Interf provides an open-source toolkit for vendor teams to create an onboarding contract for their agent, preview enterprise deployments, and publish to the registry — all from inside your coding agent. Preview onboarding in 5 minutes.
+Interf provides an open-source toolkit for vendor teams to create an onboarding contract for their agent, preview enterprise rollouts, and publish to the registry — all from inside your coding agent. Preview rollout in 5 minutes.
 
 ## Quick Start
 
 Tell your coding agent:
 
 ```
-use npx interf to create an onboarding contract and preview Nike deployment
+use npx interf to create an onboarding contract and preview Nike rollout
 ```
 
-That's it. Your coding agent will install the skills, scan your codebase, extract an `interf.yaml` onboarding contract, and preview what deployment looks like at Nike — all in one flow.
+That's it. Your coding agent will install the skills, scan your codebase, extract an `interf.yaml` onboarding contract, and preview what rollout looks like at Nike — all in one flow.
 
 Works with Claude Code, Codex, Cursor, and Goose.
 

@@ -20,7 +20,7 @@ export const simulateCommand: CommandModule = {
     );
     console.log(
       chalk.dim(
-        "  preview enterprise deployment for your interf.yaml.",
+        "  preview enterprise rollout for your interf.yaml.",
       ),
     );
     console.log();

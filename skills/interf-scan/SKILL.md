@@ -75,4 +75,4 @@ Tell the user:
 - Total dependencies found by type
 - Risk level assessment with justification
 - Any dependencies that might be missing (suggest review)
-- Next steps: review the contract, then preview enterprise deployment (e.g. "use npx interf to preview onboarding for Nike")
+- Next steps: review the contract, then preview enterprise rollout (e.g. "use npx interf to preview Nike rollout")
