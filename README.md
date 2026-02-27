@@ -9,7 +9,7 @@ Interf provides an open-source toolkit for vendor teams to create an onboarding 
 Tell your coding agent:
 
 ```
-use npx interf to create an onboarding contract and preview Nike rollout
+use npx interf to draft onboarding contract and preview rollout for Nike
 ```
 
 That's it. Your coding agent will install the skills, scan your codebase, extract an `interf.yaml` onboarding contract, and preview what rollout looks like at Nike — all in one flow.
