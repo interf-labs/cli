@@ -1,6 +1,6 @@
 # interf
 
-The unified interface for agent onboarding in enterprise.
+The universal interface for agent onboarding in enterprise.
 
 Interf provides an open-source toolkit for vendor teams to create an onboarding contract for their agent, preview enterprise rollouts, and publish to the registry — all from inside your coding agent. Preview rollout in 5 minutes.
 
