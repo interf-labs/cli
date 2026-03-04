@@ -10,7 +10,7 @@ export const simulateCommand: CommandModule = {
     console.log();
     console.log(
       chalk.dim(
-        "  For now, use the interf-simulate skill with your coding agent.",
+        "  For now, use the interf-preview skill with your coding agent.",
       ),
     );
     console.log(

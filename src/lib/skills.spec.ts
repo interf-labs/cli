@@ -22,8 +22,8 @@ describe("bundled skills", () => {
     expect(existsSync(join(BUNDLED_SKILLS_DIR, "interf-scan", "SKILL.md"))).toBe(true);
   });
 
-  it("includes interf-simulate skill", () => {
-    expect(existsSync(join(BUNDLED_SKILLS_DIR, "interf-simulate", "SKILL.md"))).toBe(true);
+  it("includes interf-preview skill", () => {
+    expect(existsSync(join(BUNDLED_SKILLS_DIR, "interf-preview", "SKILL.md"))).toBe(true);
   });
 
   it("includes interf-protocol skill", () => {
@@ -34,13 +34,13 @@ describe("bundled skills", () => {
     const skills = listBundledSkills();
     const names = skills.map((s) => s.name);
     expect(names).toContain("interf-scan");
-    expect(names).toContain("interf-simulate");
+    expect(names).toContain("interf-preview");
     expect(names).toContain("interf-protocol");
     expect(skills).toHaveLength(3);
   });
 
   it("skills have frontmatter with name and description", () => {
-    for (const skill of ["interf-scan", "interf-simulate", "interf-protocol"]) {
+    for (const skill of ["interf-scan", "interf-preview", "interf-protocol"]) {
       const content = readFileSync(
         join(BUNDLED_SKILLS_DIR, skill, "SKILL.md"),
         "utf-8",

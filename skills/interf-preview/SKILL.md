@@ -1,5 +1,5 @@
 ---
-name: interf-simulate
+name: interf-preview
 description: >
   Preview enterprise rollout for an agent's interf.yaml onboarding contract
   against enterprise profiles. Produces analysis with timelines, stakeholders,

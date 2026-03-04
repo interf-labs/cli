@@ -68,7 +68,7 @@ export const defaultCommand: CommandModule = {
       "  interf-scan         Scan codebase and create onboarding contract (interf.yaml)",
     );
     console.log(
-      "  interf-simulate     Preview enterprise rollout for a target company",
+      "  interf-preview     Preview enterprise rollout for a target company",
     );
     console.log(
       "  interf-protocol     Agent Onboarding Protocol reference",
@@ -78,7 +78,7 @@ export const defaultCommand: CommandModule = {
       "  Use interf-scan to scan this codebase and create the onboarding contract,",
     );
     console.log(
-      "  then use interf-simulate to preview enterprise rollout.",
+      "  then use interf-preview to preview enterprise rollout.",
     );
     console.log();
     console.log(chalk.dim("  interf validate     Validate interf.yaml"));
