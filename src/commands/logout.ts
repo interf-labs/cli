@@ -4,7 +4,7 @@ import type { CommandModule } from "yargs";
 
 export const logoutCommand: CommandModule = {
   command: "logout",
-  describe: "Clear stored credentials",
+  describe: false as unknown as string,
   handler: async () => {
     if (!isAuthenticated()) {
       console.log(chalk.dim("  Not logged in."));

@@ -4,7 +4,7 @@ import type { CommandModule } from "yargs";
 
 export const loginCommand: CommandModule = {
   command: "login",
-  describe: "Authenticate with interf.com",
+  describe: false as unknown as string,
   handler: async () => {
     if (isAuthenticated()) {
       console.log(chalk.dim("  Already authenticated."));

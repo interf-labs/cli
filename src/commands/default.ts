@@ -63,24 +63,25 @@ export const defaultCommand: CommandModule = {
     );
 
     console.log();
-    console.log(chalk.bold("  Skills:"));
+    console.log(chalk.bold("  Skills installed — ready to use:"));
     console.log(
-      "  interf-scan         Scan codebase and extract onboarding contract",
+      "  interf-scan         Scan codebase and create onboarding contract (interf.yaml)",
     );
     console.log(
-      "  interf-simulate     Preview enterprise deployment",
+      "  interf-simulate     Preview enterprise rollout for a target company",
     );
     console.log(
       "  interf-protocol     Agent Onboarding Protocol reference",
     );
     console.log();
-    console.log(chalk.bold("  Commands:"));
-    console.log("  interf validate         Validate interf.yaml");
-    console.log("  interf install-skill    Reinstall skills");
-    console.log("  interf login            Authenticate (coming soon)");
-    console.log("  interf publish          Publish contract (coming soon)");
-    console.log("  interf simulate         Cloud simulation (coming soon)");
+    console.log(
+      "  Use interf-scan to scan this codebase and create the onboarding contract,",
+    );
+    console.log(
+      "  then use interf-simulate to preview enterprise rollout.",
+    );
     console.log();
+    console.log(chalk.dim("  interf validate     Validate interf.yaml"));
     console.log(chalk.dim("  https://interf.com"));
     console.log();
   },

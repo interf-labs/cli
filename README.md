@@ -9,10 +9,10 @@ Interf provides an open-source toolkit for vendor teams to create an onboarding 
 Tell your coding agent:
 
 ```
-use npx interf to draft onboarding contract and preview rollout for BlackRock
+use npx interf to create an onboarding contract and preview rollout for BlackRock
 ```
 
-That's it. Your coding agent will install the skills, scan your codebase, extract an `interf.yaml` onboarding contract, and preview what rollout looks like at BlackRock — all in one flow.
+That's it. Your coding agent installs the skills, scans your codebase, creates an `interf.yaml` onboarding contract, and previews what rollout looks like at BlackRock — all in one prompt.
 
 Works with Claude Code, Codex, Cursor, and Goose.
 

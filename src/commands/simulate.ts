@@ -3,7 +3,7 @@ import type { CommandModule } from "yargs";
 
 export const simulateCommand: CommandModule = {
   command: "simulate",
-  describe: "Preview enterprise deployment on Interf Cloud",
+  describe: false as unknown as string,
   handler: async () => {
     console.log();
     console.log(chalk.yellow("  Cloud simulations are coming soon."));

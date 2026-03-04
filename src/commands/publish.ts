@@ -3,7 +3,7 @@ import type { CommandModule } from "yargs";
 
 export const publishCommand: CommandModule = {
   command: "publish",
-  describe: "Publish interf.yaml to the Interf registry",
+  describe: false as unknown as string,
   handler: async () => {
     console.log();
     console.log(chalk.yellow("  Publish is coming soon."));
