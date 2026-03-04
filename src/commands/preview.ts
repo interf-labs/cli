@@ -35,10 +35,10 @@ export const previewCommand: CommandModule = {
     }
 
     console.log();
-    console.log("  Ready. Your coding agent can now preview enterprise rollout");
-    console.log("  against any company profile (e.g. BlackRock, Goldman Sachs).");
+    console.log("  Ready. Load the " + chalk.bold("interf-preview") + " skill to preview enterprise");
+    console.log("  rollout against any company profile (e.g. BlackRock, Goldman Sachs).");
     console.log();
-    console.log(chalk.dim("  Requires interf.yaml — run: interf create"));
+    console.log(chalk.dim("  Requires interf.yaml — run: npx interf create"));
     console.log();
   },
 };

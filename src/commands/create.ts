@@ -35,10 +35,10 @@ export const createCommand: CommandModule = {
     }
 
     console.log();
-    console.log("  Ready. Your coding agent can now scan this codebase and");
-    console.log("  create an interf.yaml onboarding contract.");
+    console.log("  Ready. Load the " + chalk.bold("interf-scan") + " skill to scan this codebase");
+    console.log("  and create an interf.yaml onboarding contract.");
     console.log();
-    console.log(chalk.dim("  After creating the contract, run: interf preview"));
+    console.log(chalk.dim("  After creating the contract, run: npx interf preview"));
     console.log();
   },
 };
