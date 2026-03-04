@@ -8,7 +8,7 @@ description: >
 
 # Preview Enterprise Rollout
 
-Take the `interf.yaml` onboarding contract and preview what enterprise rollout looks like for target enterprise profiles. This is a local preview — production previews will run on Interf Cloud (coming soon via `npx interf simulate`).
+Take the `interf.yaml` onboarding contract and preview what enterprise rollout looks like for target enterprise profiles.
 
 ## When to Run
 
@@ -20,9 +20,10 @@ Run this automatically after `interf-scan` creates an `interf.yaml`, or when the
 2. Map the user's target (e.g. "Nike" → Fortune 500, "JPMorgan" → Fortune 500 Bank) to an enterprise profile
 3. For EACH dependency in the onboarding contract, calculate estimated days using base estimates × profile multiplier
 4. Identify the critical path (longest dependency resolution chain)
-5. Aggregate all stakeholders, risks, and blockers
-6. Present the Rollout Preview to the user
-7. Save full output to `.interf/simulations/{agent-name}-{timestamp}.json`
+5. Calculate total days across ALL phases: assessments & approvals → implementation & integration → UAT & security testing → staged rollout & go-live
+6. Aggregate all stakeholders, risks, and blockers
+7. Present the Rollout Preview to the user
+8. Save full output to `.interf/simulations/{agent-name}-{timestamp}.json`
 
 ## Enterprise Profiles
 
@@ -63,17 +64,31 @@ Rollout Preview
 
 {Company Name} ({Profile Type})
 
-┌───────────────┬──────────────────────────────────┐
-│    Metric     │              Value               │
-├───────────────┼──────────────────────────────────┤
-│ Critical Path │ {X} days                         │
-├───────────────┼──────────────────────────────────┤
-│ Overall Risk  │ {Critical/High/Medium/Low}       │
-├───────────────┼──────────────────────────────────┤
-│ Stakeholders  │ {N} ({list key roles})           │
-├───────────────┼──────────────────────────────────┤
-│ Dependencies  │ {N}                              │
-└───────────────┴──────────────────────────────────┘
+┌─────────────────┬──────────────────────────────────┐
+│      Metric     │              Value               │
+├─────────────────┼──────────────────────────────────┤
+│ Total Days      │ {X} days                         │
+├─────────────────┼──────────────────────────────────┤
+│ Overall Risk    │ {Critical/High/Medium/Low}       │
+├─────────────────┼──────────────────────────────────┤
+│ Stakeholders    │ {N} ({list key roles})           │
+├─────────────────┼──────────────────────────────────┤
+│ Dependencies    │ {N}                              │
+└─────────────────┴──────────────────────────────────┘
+
+Phases:
+
+┌──────────────────────────────────┬──────────────────┐
+│ Phase                            │ Timeline         │
+├──────────────────────────────────┼──────────────────┤
+│ Assessments & Approvals          │ Days 1–{X}       │
+├──────────────────────────────────┼──────────────────┤
+│ Implementation & Integration     │ Days {X}–{X}     │
+├──────────────────────────────────┼──────────────────┤
+│ UAT & Security Testing           │ Days {X}–{X}     │
+├──────────────────────────────────┼──────────────────┤
+│ Staged Rollout & Go-Live         │ Days {X}–{X}     │
+└──────────────────────────────────┴──────────────────┘
 
 Dependency Breakdown:
 
@@ -116,4 +131,3 @@ Be realistic about enterprise timelines. Fortune 500 companies have heavy govern
 
 - Tell the user the top recommendation (e.g. "Start vendor security assessments immediately — they're on the critical path")
 - Save the full analysis as JSON to `.interf/simulations/`
-- Mention that production previews with richer analysis are coming via `npx interf simulate`
