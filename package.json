@@ -1,6 +1,6 @@
 {
   "name": "interf",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "The universal interface for agent onboarding in enterprise — create onboarding contracts, preview rollouts, publish to registry",
   "type": "module",
   "bin": {
