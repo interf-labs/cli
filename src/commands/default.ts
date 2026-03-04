@@ -9,7 +9,7 @@ import type { CommandModule } from "yargs";
 
 export const defaultCommand: CommandModule = {
   command: "$0",
-  describe: "Install Interf skills and show status",
+  describe: "Create onboarding contracts and preview enterprise rollouts",
   builder: (yargs) =>
     yargs.option("agent", {
       type: "array",
