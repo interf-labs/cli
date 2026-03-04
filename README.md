@@ -78,11 +78,10 @@ risk_level: high
 ## CLI Commands
 
 ```
-interf                  Install skills and show status
+interf                  Install all skills and show status
+interf create           Create an onboarding contract by scanning your codebase
+interf preview          Preview enterprise rollout for a target company
 interf validate         Validate interf.yaml against the protocol schema
-interf install-skill    Reinstall or manage skills
-interf login            Authenticate with interf.com (coming soon)
-interf publish          Publish onboarding contract to registry (coming soon)
 ```
 
 ## How It Works

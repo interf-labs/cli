@@ -1,6 +1,6 @@
 # Interf CLI
 
-Open-source CLI for the Agent Readiness Protocol. Published as `interf` on npm.
+Open-source CLI for the Agent Onboarding Protocol. Published as `interf` on npm.
 
 ## Project
 
@@ -11,7 +11,7 @@ Open-source CLI for the Agent Readiness Protocol. Published as `interf` on npm.
 
 ## Architecture
 
-Skills-based CLI — installs SKILL.md files to coding agents (Claude Code, Codex, Cursor, Goose) that teach them how to scan codebases and simulate enterprise readiness.
+Skills-based CLI — installs SKILL.md files to coding agents (Claude Code, Codex, Cursor, Goose) that teach them how to create onboarding contracts and preview enterprise rollouts.
 
 No Agent SDK dependency. No network calls. No code execution.
 
@@ -24,9 +24,9 @@ No Agent SDK dependency. No network calls. No code execution.
 ### Commands
 
 - `npx interf` — Auto-detect agents, install all skills
-- `interf install-skill` — Install specific skills to specific agents
-- `interf validate <file>` — Validate an interf.yaml manifest
-- `interf login/logout/publish/simulate` — Stubbed (coming soon)
+- `interf create` — Install scan skill, create onboarding contract
+- `interf preview` — Install preview skill, preview enterprise rollout
+- `interf validate <file>` — Validate an interf.yaml onboarding contract
 
 ### Stack
 
@@ -53,6 +53,6 @@ npm publish         # Build + publish to npm
 ## Conventions
 
 - Keep dependencies minimal (4 production deps)
-- No fake API endpoints — stub commands with "coming soon"
+- No fake API endpoints — hide stub commands from --help
 - Skills are the primary interface — the CLI installs them, agents use them
 - Follow WorkOS CLI patterns for structure and best practices
