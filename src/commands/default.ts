@@ -63,22 +63,22 @@ export const defaultCommand: CommandModule = {
     );
 
     console.log();
-    console.log(chalk.bold("  Skills installed — ready to use:"));
+    console.log(chalk.bold("  Agent skills installed (not CLI commands — use via your coding agent):"));
     console.log(
       "  interf-scan         Scan codebase and create onboarding contract (interf.yaml)",
     );
     console.log(
-      "  interf-preview     Preview enterprise rollout for a target company",
+      "  interf-preview      Preview enterprise rollout for a target company",
     );
     console.log(
       "  interf-protocol     Agent Onboarding Protocol reference",
     );
     console.log();
     console.log(
-      "  Use interf-scan to scan this codebase and create the onboarding contract,",
+      "  Your coding agent can now use these skills to create the onboarding",
     );
     console.log(
-      "  then use interf-preview to preview enterprise rollout.",
+      "  contract and preview rollout. They are not CLI commands.",
     );
     console.log();
     console.log(chalk.dim("  interf validate     Validate interf.yaml"));
