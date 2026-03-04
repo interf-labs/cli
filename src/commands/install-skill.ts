@@ -9,7 +9,7 @@ import type { CommandModule } from "yargs";
 
 export const installSkillCommand: CommandModule = {
   command: "install-skill",
-  describe: "Reinstall onboarding and rollout preview skills",
+  describe: false as unknown as string,
   builder: (yargs) =>
     yargs
       .option("agent", {
