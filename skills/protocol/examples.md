@@ -51,7 +51,7 @@ An AI platform that processes and extracts data from enterprise documents.
 ```yaml
 name: docai-platform
 version: 1.0.0
-description: AI-powered document processing and data extraction
+description: Document processing and data extraction platform
 
 requirements:
   - what: Access to your document storage where source files live (SharePoint, S3, or equivalent)
@@ -91,7 +91,7 @@ An agent that handles tier-1 customer support with access to knowledge base and 
 ```yaml
 name: support-copilot
 version: 0.3.0
-description: AI-powered tier-1 customer support agent
+description: Tier-1 customer support automation
 
 requirements:
   - what: Read access to your customer support knowledge base

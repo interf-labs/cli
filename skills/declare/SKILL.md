@@ -1,9 +1,9 @@
 ---
 name: declare
 description: >
-  Declare an interf.yaml onboarding contract for your solution. Scans the codebase
+  Declare an interf.yaml onboarding contract. Scans the codebase
   to extract enterprise dependencies, or helps you write them manually. Use when
-  you want to define what your solution needs from enterprise to deliver value.
+  you want to define what you need from enterprise to deliver value.
 license: MIT
 metadata:
   author: interf
@@ -12,7 +12,7 @@ metadata:
 
 # Declare Onboarding Contract
 
-Extract or define an `interf.yaml` onboarding contract declaring what this solution needs from enterprise environments.
+Extract or define an `interf.yaml` onboarding contract declaring what you need from enterprise environments.
 
 The contract is plain English. Each dependency is a `what` (what you need) and `ready` (how enterprise knows it's done).
 
@@ -21,7 +21,7 @@ The contract is plain English. Each dependency is a `what` (what you need) and `
 ### Step 1: Understand the Solution
 
 - Read README, package.json / pyproject.toml / go.mod, and key config files
-- Identify what the solution does — is it an AI agent, platform, tool, or service?
+- Identify what this project does and who the enterprise users are
 - Understand what value it delivers to enterprise customers
 
 ### Step 2: Extract Dependencies
@@ -36,7 +36,7 @@ Scan the codebase for things that depend on the enterprise environment. Think li
 - Webhook configurations
 
 **Data requirements**
-- What data does the solution need to function?
+- What data access is needed?
 - Historical data for training or analysis?
 - Real-time data feeds?
 - Custom field mapping needed?
@@ -64,9 +64,9 @@ Scan the codebase for things that depend on the enterprise environment. Think li
 Write `interf.yaml` to the project root:
 
 ```yaml
-name: solution-name
+name: project-name
 version: 0.1.0
-description: What the solution does, one line
+description: What it does, one line
 
 requirements:
   - what: Plain English — what you need from enterprise

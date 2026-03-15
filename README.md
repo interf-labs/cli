@@ -20,7 +20,7 @@ Works with Claude Code, Codex, Cursor, and Goose.
 
 ## interf.yaml
 
-The onboarding contract declares what your solution needs from enterprise:
+The onboarding contract declares what you need from enterprise:
 
 ```yaml
 name: acme-crm-automation

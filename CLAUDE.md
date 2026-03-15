@@ -45,9 +45,9 @@ No Agent SDK dependency. No network calls. No code execution.
 ### Contract format (interf.yaml)
 
 ```yaml
-name: solution-name
+name: project-name
 version: 0.1.0
-description: What the solution does
+description: What it does
 
 requirements:
   - what: Plain English — what you need

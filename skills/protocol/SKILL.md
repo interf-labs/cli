@@ -2,7 +2,7 @@
 name: agent-onboarding-protocol
 description: >
   The Agent Onboarding Protocol specification. Defines the interf.yaml contract
-  format for declaring what solutions need from enterprise environments.
+  format for declaring what vendors need from enterprise environments.
   Use as reference when drafting or reviewing onboarding contracts.
 user-invocable: false
 license: MIT
@@ -13,7 +13,7 @@ metadata:
 
 # Agent Onboarding Protocol
 
-An open standard for declaring what AI-powered solutions need from enterprise environments to deliver value. The onboarding contract makes enterprise dependencies explicit, previewable, and verifiable — so enterprises self-prepare and vendors stop waiting.
+An open standard for declaring what vendors need from enterprise environments to deliver value. The onboarding contract makes enterprise dependencies explicit, previewable, and verifiable — so enterprises self-prepare and vendors stop waiting.
 
 **Vendors declare it. Enterprises resolve it. No more mid-flight surprises.**
 
@@ -43,11 +43,11 @@ No match? Leave `canonical` empty — the contract works with plain English alon
 
 ## Examples
 
-See [examples.md](./examples.md) for realistic contracts across different solution types (CRM automation, document processing, customer support).
+See [examples.md](./examples.md) for realistic contracts across different rollout types (CRM automation, document processing, customer support).
 
 ## How It Works
 
 1. **Declare** — Vendor teams declare what they need in an `interf.yaml` contract. Use the `declare` skill to extract from a codebase, or write manually.
 2. **Deliver** — Contract is sent to enterprise (via Interf platform, email, or however you work today).
 3. **Resolve** — Enterprise works through each dependency. Each item has `ready` criteria so there's no ambiguity.
-4. **Verify** — When all `requirements` are resolved, the solution is clear to deploy.
+4. **Verify** — When all `requirements` are resolved, rollout can proceed.

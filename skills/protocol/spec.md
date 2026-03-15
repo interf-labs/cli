@@ -6,9 +6,9 @@
 # Required
 name: string              # Solution/agent name (kebab-case)
 version: string           # Semver (0.1.0, 1.0.0, etc.)
-description: string       # What the solution does, one line
+description: string       # What it does, one line
 
-# Dependencies — what the solution needs from enterprise
+# Dependencies — what you need from enterprise
 requirements:             # Required dependencies (blocking)
   - what: string          # Plain English — what you need
     ready: string         # Plain English — how enterprise knows it's done
@@ -28,8 +28,8 @@ optional:                 # Non-blocking dependencies (improve experience)
 |---|---|---|
 | `name` | Yes | Solution identifier. Kebab-case. Used for versioning and registry lookup. |
 | `version` | Yes | Semver. Bump when dependencies change. Allows enterprises to track contract changes across versions. |
-| `description` | Yes | One-line description of what the solution does. Written for enterprise stakeholders, not developers. |
-| `requirements` | Yes | List of required dependencies. If any are unresolved, the solution cannot deliver full value. |
+| `description` | Yes | One-line description. Written for enterprise stakeholders, not developers. |
+| `requirements` | Yes | List of required dependencies. If any are unresolved, rollout cannot proceed. |
 | `optional` | No | List of optional dependencies. Solution works without them but experience improves with them. |
 
 ### Dependency fields
