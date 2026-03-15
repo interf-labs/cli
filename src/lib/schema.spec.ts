@@ -6,17 +6,12 @@ describe("schema", () => {
     name: "test-agent",
     version: "0.1.0",
     description: "A test agent for CRM automation",
-    dependencies: [
+    requirements: [
       {
-        type: "api",
-        name: "Salesforce API",
-        description: "Read/write contacts",
-        required: true,
-        config: { endpoint: "https://api.salesforce.com" },
+        what: "Read/write access to your CRM (contacts and opportunities)",
+        ready: "We can create a contact and read an opportunity via API from our staging environment",
       },
     ],
-    capabilities: ["read_contacts"],
-    risk_level: "medium",
   };
 
   it("accepts a valid manifest", () => {
@@ -24,32 +19,33 @@ describe("schema", () => {
     expect(result.success).toBe(true);
   });
 
-  it("accepts all dependency types", () => {
-    const types = [
-      "api",
-      "database",
-      "auth",
-      "storage",
-      "network",
-      "secret",
-      "approval",
-      "compliance",
-    ];
-    for (const type of types) {
-      const manifest = {
-        ...validManifest,
-        dependencies: [{ type, name: `${type} dep`, required: true }],
-      };
-      const result = validateManifest(manifest);
-      expect(result.success, `type "${type}" should be valid`).toBe(true);
-    }
+  it("accepts requirements with canonical field", () => {
+    const manifest = {
+      ...validManifest,
+      requirements: [
+        {
+          what: "Read/write access to your CRM",
+          ready: "We can create a contact via API",
+          canonical: "integration.crm.api",
+        },
+      ],
+    };
+    const result = validateManifest(manifest);
+    expect(result.success).toBe(true);
   });
 
-  it("accepts all risk levels", () => {
-    for (const risk_level of ["low", "medium", "high", "critical"]) {
-      const result = validateManifest({ ...validManifest, risk_level });
-      expect(result.success, `risk "${risk_level}" should be valid`).toBe(true);
-    }
+  it("accepts optional requirements", () => {
+    const manifest = {
+      ...validManifest,
+      optional: [
+        {
+          what: "Webhook endpoint for real-time updates",
+          ready: "We receive a test webhook payload within 5 seconds",
+        },
+      ],
+    };
+    const result = validateManifest(manifest);
+    expect(result.success).toBe(true);
   });
 
   it("rejects missing name", () => {
@@ -69,37 +65,25 @@ describe("schema", () => {
     expect(result.success).toBe(false);
   });
 
-  it("rejects empty dependencies", () => {
-    const result = validateManifest({ ...validManifest, dependencies: [] });
+  it("rejects empty requirements", () => {
+    const result = validateManifest({ ...validManifest, requirements: [] });
     expect(result.success).toBe(false);
   });
 
-  it("rejects invalid dependency type", () => {
+  it("rejects requirement missing what", () => {
     const result = validateManifest({
       ...validManifest,
-      dependencies: [{ type: "invalid", name: "test", required: true }],
+      requirements: [{ ready: "test criteria" }],
     });
     expect(result.success).toBe(false);
   });
 
-  it("rejects invalid risk level", () => {
+  it("rejects requirement missing ready", () => {
     const result = validateManifest({
       ...validManifest,
-      risk_level: "extreme",
+      requirements: [{ what: "test requirement" }],
     });
     expect(result.success).toBe(false);
-  });
-
-  it("defaults required to true when omitted", () => {
-    const manifest = {
-      ...validManifest,
-      dependencies: [{ type: "api", name: "Test API" }],
-    };
-    const result = validateManifest(manifest);
-    expect(result.success).toBe(true);
-    if (result.success) {
-      expect(result.data.dependencies[0].required).toBe(true);
-    }
   });
 
   it("allows optional fields to be omitted", () => {
@@ -107,7 +91,12 @@ describe("schema", () => {
       name: "minimal-agent",
       version: "1.0.0",
       description: "Minimal test",
-      dependencies: [{ type: "api", name: "Some API" }],
+      requirements: [
+        {
+          what: "Some requirement",
+          ready: "Some criteria",
+        },
+      ],
     };
     const result = validateManifest(minimal);
     expect(result.success).toBe(true);

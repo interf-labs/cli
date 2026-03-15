@@ -39,10 +39,8 @@ export const validateCommand: CommandModule = {
       console.log();
       console.log(`  Name:          ${m.name}`);
       console.log(`  Version:       ${m.version}`);
-      console.log(`  Dependencies:  ${m.dependencies.length}`);
-      if (m.risk_level) console.log(`  Risk Level:    ${m.risk_level}`);
-      if (m.capabilities)
-        console.log(`  Capabilities:  ${m.capabilities.length}`);
+      console.log(`  Requirements:  ${m.requirements.length}`);
+      if (m.optional) console.log(`  Optional:      ${m.optional.length}`);
       console.log();
     } else {
       console.error();

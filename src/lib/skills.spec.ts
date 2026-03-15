@@ -18,29 +18,29 @@ import {
 } from "./skills.js";
 
 describe("bundled skills", () => {
-  it("includes interf-scan skill", () => {
-    expect(existsSync(join(BUNDLED_SKILLS_DIR, "interf-scan", "SKILL.md"))).toBe(true);
+  it("includes declare skill", () => {
+    expect(existsSync(join(BUNDLED_SKILLS_DIR, "declare", "SKILL.md"))).toBe(true);
   });
 
-  it("includes interf-preview skill", () => {
-    expect(existsSync(join(BUNDLED_SKILLS_DIR, "interf-preview", "SKILL.md"))).toBe(true);
+  it("includes preview skill", () => {
+    expect(existsSync(join(BUNDLED_SKILLS_DIR, "preview", "SKILL.md"))).toBe(true);
   });
 
-  it("includes interf-protocol skill", () => {
-    expect(existsSync(join(BUNDLED_SKILLS_DIR, "interf-protocol", "SKILL.md"))).toBe(true);
+  it("includes protocol skill", () => {
+    expect(existsSync(join(BUNDLED_SKILLS_DIR, "protocol", "SKILL.md"))).toBe(true);
   });
 
   it("lists all 3 bundled skills", () => {
     const skills = listBundledSkills();
     const names = skills.map((s) => s.name);
-    expect(names).toContain("interf-scan");
-    expect(names).toContain("interf-preview");
-    expect(names).toContain("interf-protocol");
+    expect(names).toContain("declare");
+    expect(names).toContain("preview");
+    expect(names).toContain("protocol");
     expect(skills).toHaveLength(3);
   });
 
   it("skills have frontmatter with name and description", () => {
-    for (const skill of ["interf-scan", "interf-preview", "interf-protocol"]) {
+    for (const skill of ["declare", "preview", "protocol"]) {
       const content = readFileSync(
         join(BUNDLED_SKILLS_DIR, skill, "SKILL.md"),
         "utf-8",
@@ -113,11 +113,11 @@ describe("skill installation", () => {
 
   it("installs a skill to an agent", () => {
     const agents = createAgents(testHome);
-    const result = installSkillToAgent("interf-scan", agents["claude-code"]);
+    const result = installSkillToAgent("declare", agents["claude-code"]);
 
     expect(result.success).toBe(true);
     expect(
-      existsSync(join(testHome, ".claude", "skills", "interf-scan", "SKILL.md")),
+      existsSync(join(testHome, ".claude", "skills", "declare", "SKILL.md")),
     ).toBe(true);
   });
 

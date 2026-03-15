@@ -2,98 +2,63 @@
 
 The universal interface for agent onboarding in enterprise.
 
-Interf provides an open-source toolkit for vendor teams to create an onboarding contract for their agent, preview enterprise rollouts, and publish to the registry — all from inside your coding agent. Preview rollout in 5 minutes.
-
 ## Quick Start
 
-Tell your coding agent:
+Install the Agent Onboarding Protocol skills:
+
+```bash
+npx skills add interf-labs/agent-onboarding-protocol
+```
+
+Then tell your coding agent:
 
 ```
-use npx interf to create an onboarding contract and preview rollout for BlackRock
+declare an onboarding contract for this project and preview rollout for BlackRock
 ```
-
-That's it. Your coding agent installs the skills, scans your codebase, creates an `interf.yaml` onboarding contract, and previews what rollout looks like at BlackRock — all in one prompt.
 
 Works with Claude Code, Codex, Cursor, and Goose.
 
-## What Happens
-
-1. **Scan** — Your coding agent analyzes your codebase and extracts every enterprise dependency: APIs, databases, auth providers, secrets, compliance requirements, and approval workflows.
-2. **Contract** — Dependencies are written to `interf.yaml`, a machine-readable onboarding contract between vendor and enterprise.
-3. **Preview** — A rollout preview runs against the target enterprise profile — timelines, stakeholders, risks, blockers, and critical path to production.
-
 ## interf.yaml
 
-The onboarding contract declares everything your agent needs from an enterprise:
+The onboarding contract declares what your solution needs from enterprise:
 
 ```yaml
-name: crm-automation-agent
-version: 0.1.0
+name: acme-crm-automation
+version: 0.2.0
 description: Automates CRM data entry and follow-up scheduling
 
-dependencies:
-  - type: api
-    name: Salesforce API
-    description: Read/write contacts and opportunities
-    required: true
-    config:
-      endpoint: https://api.salesforce.com
-      auth_type: oauth2
-      scopes: [api, refresh_token]
+requirements:
+  - what: Read/write access to your CRM (contacts and opportunities)
+    ready: We can create a contact and read an opportunity via API from our staging environment
 
-  - type: auth
-    name: SSO Integration
-    required: true
-    config:
-      provider: okta
-      protocol: saml
+  - what: SSO endpoint for our service to authenticate your users
+    ready: A test user can log into our app via your SSO and see their CRM data
 
-  - type: compliance
-    name: SOC2 Compliance
-    required: true
-    config:
-      frameworks: [SOC2]
-      controls: [data_encryption, audit_logging, access_review]
+  - what: Someone from your data team to map your custom fields to our schema (~4 hours)
+    ready: Field mapping document completed and signed off by both sides
 
-capabilities:
-  - read_contacts
-  - write_contacts
-
-risk_level: high
+optional:
+  - what: Webhook endpoint for real-time update notifications
+    ready: We receive a test webhook payload within 5 seconds of a CRM update
 ```
 
-### Dependency types
-
-| Type | Purpose |
-|---|---|
-| `api` | External API endpoints |
-| `database` | Database access |
-| `auth` | Authentication providers (SSO, OAuth, SAML) |
-| `storage` | Cloud/local storage |
-| `network` | Network access requirements |
-| `secret` | Credentials and secrets |
-| `approval` | Stakeholder sign-offs |
-| `compliance` | Regulatory frameworks (SOC2, HIPAA, GDPR) |
-
-## CLI Commands
+## CLI
 
 ```
-interf                  Install all skills and show status
-interf create           Create an onboarding contract by scanning your codebase
-interf preview          Preview enterprise rollout for a target company
+interf                  Install all skills to detected coding agents
+interf declare          Install declare + protocol skills
 interf validate         Validate interf.yaml against the protocol schema
 ```
 
-## How It Works
+The CLI also installs skills for codebases not using `npx skills`.
 
-Interf installs skills to your coding agent — structured prompts that teach it the Agent Onboarding Protocol. No API keys. No network calls. No code execution. The intelligence comes from your coding agent; Interf gives it the domain knowledge.
+## Skills
 
-Skills are installed to agent-specific directories and are automatically available in all projects:
-
-- Claude Code — `~/.claude/skills/`
-- Codex — `~/.codex/skills/`
-- Cursor — `~/.cursor/skills/`
-- Goose — `~/.config/goose/skills/`
+| Skill | Purpose |
+|---|---|
+| `declare` | Declare an onboarding contract from your codebase |
+| `preview` | Preview enterprise rollout against company profiles |
+| `protocol` | Agent Onboarding Protocol specification and canonical dependency types |
 
 ## License
 

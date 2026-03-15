@@ -6,23 +6,11 @@ export const simulateCommand: CommandModule = {
   describe: false as unknown as string,
   handler: async () => {
     console.log();
-    console.log(chalk.yellow("  Cloud simulations are coming soon."));
+    console.log(chalk.yellow("  Cloud-powered simulations are coming soon."));
     console.log();
-    console.log(
-      chalk.dim(
-        "  For now, use the interf-preview skill with your coding agent.",
-      ),
-    );
-    console.log(
-      chalk.dim(
-        "  Run `npx interf` to install skills, then ask your agent to",
-      ),
-    );
-    console.log(
-      chalk.dim(
-        "  preview enterprise rollout for your interf.yaml.",
-      ),
-    );
+    console.log(chalk.dim("  For now, use the preview skill with your coding agent."));
+    console.log(chalk.dim("  Run `npx interf` to install skills, then tell your agent:"));
+    console.log(chalk.dim("  preview rollout for <company>"));
     console.log();
     console.log(chalk.dim("  https://interf.com"));
     console.log();

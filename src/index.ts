@@ -1,2 +1,2 @@
-export { validateManifest, ManifestSchema, DependencySchema } from "./lib/schema.js";
-export type { Manifest, Dependency } from "./lib/schema.js";
+export { validateManifest, ManifestSchema, RequirementSchema } from "./lib/schema.js";
+export type { Manifest, Requirement } from "./lib/schema.js";
