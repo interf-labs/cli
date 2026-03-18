@@ -1,6 +1,6 @@
 {
   "name": "interf",
-  "version": "2.3.4",
+  "version": "2.4.0",
   "description": "Agent Onboarding Protocol — declare what you need from enterprise, preview rollouts, publish to registry",
   "type": "module",
   "bin": {
