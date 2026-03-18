@@ -1,7 +1,7 @@
 {
   "name": "interf",
   "version": "2.4.0",
-  "description": "Agent Onboarding Protocol — declare what you need from enterprise, preview rollouts, publish to registry",
+  "description": "Enterprise Readiness Protocol \u2014 validate readiness contracts, publish to registry, preview enterprise rollouts",
   "type": "module",
   "bin": {
     "interf": "dist/bin.js"
@@ -27,15 +27,11 @@
     "access": "public"
   },
   "keywords": [
+    "enterprise-readiness",
+    "readiness-contract",
     "interf",
-    "agent-onboarding",
-    "onboarding-protocol",
     "enterprise",
-    "onboarding-contract",
-    "skills",
-    "coding-agents",
-    "rollout",
-    "dependencies"
+    "rollout"
   ],
   "license": "MIT",
   "repository": {
