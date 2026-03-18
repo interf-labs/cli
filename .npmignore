@@ -1,0 +1,16 @@
+src/
+**/*.spec.ts
+**/*.spec.js
+**/*.spec.d.ts
+**/*.spec.js.map
+vitest.config.ts
+tsconfig.json
+.github/
+.gitignore
+.gitmodules
+CLAUDE.md
+canonical-dependencies/
+protocol/README.md
+protocol/AGENTS.md
+protocol/LICENSE
+protocol/.git

@@ -1,0 +1,148 @@
+---
+title: "The Universal Interface for Agent Onboarding"
+sidebarTitle: "Introduction"
+description: "Interf is the universal interface for agent onboarding in enterprise. Create your agent's onboarding contract, preview enterprise rollouts, and publish to the registry — so enterprises can self-prepare and your agent can self-onboard."
+---
+
+## Quick Start
+
+Tell your coding agent:
+
+```
+use npx interf to create an onboarding contract and preview rollout for BlackRock
+```
+
+That's it. Your coding agent installs the skills, scans your codebase, creates an `interf.yaml` onboarding contract declaring every dependency, and previews what rollout looks like at BlackRock — all in one prompt.
+
+Works with **Claude Code**, **Codex**, **Cursor**, and **Goose**.
+
+<Note>
+  **No API keys. No network calls. No code execution.** Interf installs skills — structured domain knowledge — to your coding agent. The intelligence comes from your agent; Interf teaches it the Agent Onboarding Protocol.
+</Note>
+
+## Who It's For
+
+Interf provides a toolkit for **vendor deploy engineers and teams responsible for enterprise rollouts**. If you're shipping an AI agent into Fortune 500 environments, Interf helps you:
+
+- **Extract** every enterprise dependency from your codebase — APIs, databases, auth, secrets, compliance, approvals
+- **Review** the onboarding contract before you publish it
+- **Preview** rollout against specific enterprise profiles — BlackRock, Goldman Sachs, Series B startup — and get timelines, stakeholders, risks, and blockers
+- **Check enterprise onboarding** for your solution within 5 minutes
+
+## What You Get
+
+Each rollout preview produces per-dependency analysis:
+
+- **Resolution flow** — ordered steps with owners, timelines, and blockers
+- **Stakeholders** — roles, involvement level, time commitment
+- **Risks** — likelihood, impact, and mitigations
+- **Critical path** — total days to production
+
+```yaml
+# interf.yaml — your agent's onboarding contract
+name: crm-automation-agent
+version: 0.1.0
+description: Automates CRM data entry and follow-up scheduling
+
+dependencies:
+  - type: api
+    name: Salesforce API
+    description: Read/write contacts and opportunities
+    required: true
+    config:
+      endpoint: https://api.salesforce.com
+      auth_type: oauth2
+      scopes: [api, refresh_token]
+
+  - type: auth
+    name: SSO Integration
+    description: Enterprise SSO for agent authentication
+    required: true
+    config:
+      provider: okta
+      protocol: saml
+
+  - type: compliance
+    name: SOC2 Compliance
+    description: Required for handling customer PII
+    required: true
+    config:
+      frameworks: [SOC2]
+      controls: [data_encryption, audit_logging, access_review]
+
+  - type: approval
+    name: Security Review
+    description: InfoSec team must approve API access
+    required: true
+    config:
+      approver_role: security_engineer
+      justification: Agent accesses customer PII via Salesforce
+
+capabilities:
+  - read_contacts
+  - write_contacts
+  - read_opportunities
+  - schedule_followups
+
+risk_level: high
+```
+
+---
+
+## Install
+
+<CodeGroup>
+
+```bash npx (recommended)
+npx interf
+```
+
+```bash npm
+npm install -g interf
+```
+
+</CodeGroup>
+
+Auto-detects your coding agent (Claude Code, Codex, Cursor, Goose) and installs skills.
+
+---
+
+## The Protocol
+
+Today, agents ship blindly into enterprise environments. Onboarding gaps — missing data access, authentication, compliance permissions — are discovered mid-flight, forcing vendors and enterprises to fix them in production. Forward-deployed engineers spend months on discovery and dependency resolution that should have happened before rollout began.
+
+**Interf provides the structural fix.** The Agent Onboarding Protocol is an open standard for declaring what agents need from enterprises before rollout. Vendors define it. Enterprises resolve it. Agents verify it.
+
+<CardGroup cols={2}>
+  <Card title="For Vendors" icon="code">
+    Define your agent's requirements in `interf.yaml`. Preview rollouts against enterprise profiles.
+    Publish to the Interf registry so enterprises can self-prepare.
+  </Card>
+  <Card title="For Enterprises" icon="server">
+    Pull vendor onboarding contracts from the registry. Run pre-flight checks against your environment.
+    Resolve dependencies before the agent arrives — not after.
+  </Card>
+</CardGroup>
+
+### How It Works in Production
+
+The open-source toolkit is day zero — vendors adopt the protocol, define their onboarding contract, and publish to the Interf registry. Enterprises pull the contract and self-prepare for agent onboarding. The production flow eliminates the 6+ months of discovery, dependency resolution, and back-and-forth that stalls enterprise rollouts today.
+
+1. **Vendor** defines `interf.yaml` and publishes to the Interf registry — the onboarding contract declaring every dependency.
+2. **Enterprise** loads the vendor contract into the Interf Gateway, creating an onboarding workspace.
+3. **Gateway** exposes onboarding state as an MCP endpoint — each dependency tracked from unresolved to verified.
+4. **Enterprise IT** resolves dependencies — provisions API access, configures SSO, completes security reviews — with each resolution audited.
+5. **Vendor agent** connects to the enterprise gateway endpoint, queries its onboarding state, and self-verifies each dependency against vendor criteria.
+6. **Agent confirms** all dependencies verified — ready for production. Full audit trail of resolution for every item.
+
+The gateway is the universal interface between vendor and enterprise. Resolution happens on the enterprise side. Verification happens on the agent side. Interf connects the two — with an independent audit trail that establishes who resolved what.
+
+Vendors who publish to the registry can rely on enterprises implementing the protocol. Enterprises who adopt the gateway can onboard any vendor agent that speaks Interf. The result: agent self-onboarding without human intervention, within the eligible scope defined by the contract.
+
+### What's Available Today
+
+The onboarding toolkit — the vendor side of the protocol. Tell your coding agent to use Interf. It will scan your codebase, produce the onboarding contract, and preview enterprise rollout against any profile. Previews give you the engagement layer today; the enterprise gateway and self-onboarding are what we're building toward.
+
+<Card title="Get Started" icon="rocket" href="#quick-start">
+  Tell your coding agent to use `npx interf` and create your first onboarding contract.
+</Card>

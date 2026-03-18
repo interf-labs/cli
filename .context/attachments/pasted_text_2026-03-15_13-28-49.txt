@@ -1,0 +1,107 @@
+rors in your package.json when publishing.  Please run "npm pkg fix" to address these errors.
+npm warn publish errors corrected:
+npm warn publish "repository.url" was normalized to "git+https://github.com/interf-labs/cli.git"
+npm notice
+npm notice 📦  interf@2.1.0
+npm notice Tarball Contents
+npm notice 1.1kB LICENSE
+npm notice 1.8kB README.md
+npm notice 31B dist/bin.d.ts
+npm notice 922B dist/bin.js
+npm notice 868B dist/bin.js.map
+npm notice 95B dist/commands/create.d.ts
+npm notice 1.6kB dist/commands/create.js
+npm notice 1.5kB dist/commands/create.js.map
+npm notice 96B dist/commands/declare.d.ts
+npm notice 1.3kB dist/commands/declare.js
+npm notice 1.4kB dist/commands/declare.js.map
+npm notice 96B dist/commands/default.d.ts
+npm notice 1.9kB dist/commands/default.js
+npm notice 2.1kB dist/commands/default.js.map
+npm notice 101B dist/commands/install-skill.d.ts
+npm notice 3.2kB dist/commands/install-skill.js
+npm notice 3.4kB dist/commands/install-skill.js.map
+npm notice 94B dist/commands/login.d.ts
+npm notice 651B dist/commands/login.js
+npm notice 727B dist/commands/login.js.map
+npm notice 95B dist/commands/logout.d.ts
+npm notice 449B dist/commands/logout.js
+npm notice 550B dist/commands/logout.js.map
+npm notice 96B dist/commands/preview.d.ts
+npm notice 1.6kB dist/commands/preview.js
+npm notice 1.6kB dist/commands/preview.js.map
+npm notice 96B dist/commands/publish.d.ts
+npm notice 575B dist/commands/publish.js
+npm notice 637B dist/commands/publish.js.map
+npm notice 97B dist/commands/simulate.d.ts
+npm notice 664B dist/commands/simulate.js
+npm notice 737B dist/commands/simulate.js.map
+npm notice 97B dist/commands/validate.d.ts
+npm notice 1.9kB dist/commands/validate.js
+npm notice 2.1kB dist/commands/validate.js.map
+npm notice 149B dist/index.d.ts
+npm notice 120B dist/index.js
+npm notice 167B dist/index.js.map
+npm notice 329B dist/lib/auth.d.ts
+npm notice 887B dist/lib/auth.js
+npm notice 976B dist/lib/auth.js.map
+npm notice 180B dist/lib/config.d.ts
+npm notice 596B dist/lib/config.js
+npm notice 675B dist/lib/config.js.map
+npm notice 2.7kB dist/lib/schema.d.ts
+npm notice 795B dist/lib/schema.js
+npm notice 941B dist/lib/schema.js.map
+npm notice 837B dist/lib/skills.d.ts
+npm notice 3.0kB dist/lib/skills.js
+npm notice 3.3kB dist/lib/skills.js.map
+npm notice 143B dist/types.d.ts
+npm notice 44B dist/types.js
+npm notice 102B dist/types.js.map
+npm notice 1.2kB package.json
+npm notice 3.7kB skills/declare/SKILL.md
+npm notice 4.7kB skills/preview/SKILL.md
+npm notice 5.1kB skills/protocol/examples.md
+npm notice 2.7kB skills/protocol/SKILL.md
+npm notice 3.6kB skills/protocol/spec.md
+npm notice 1.4kB skills/protocol/types/auth/credentials.md
+npm notice 733B skills/protocol/types/auth/overview.md
+npm notice 1.1kB skills/protocol/types/auth/sso.md
+npm notice 938B skills/protocol/types/data/access.md
+npm notice 919B skills/protocol/types/data/exports.md
+npm notice 1.0kB skills/protocol/types/data/mapping.md
+npm notice 910B skills/protocol/types/data/overview.md
+npm notice 1.7kB skills/protocol/types/index.md
+npm notice 913B skills/protocol/types/infrastructure/environments.md
+npm notice 825B skills/protocol/types/infrastructure/network.md
+npm notice 700B skills/protocol/types/infrastructure/overview.md
+npm notice 602B skills/protocol/types/integration/analytics.md
+npm notice 1.1kB skills/protocol/types/integration/crm.md
+npm notice 1.2kB skills/protocol/types/integration/erp.md
+npm notice 1.1kB skills/protocol/types/integration/messaging.md
+npm notice 1.3kB skills/protocol/types/integration/overview.md
+npm notice 613B skills/protocol/types/integration/ticketing.md
+npm notice 869B skills/protocol/types/integration/webhook.md
+npm notice 998B skills/protocol/types/process/change-management.md
+npm notice 1.1kB skills/protocol/types/process/overview.md
+npm notice 525B skills/protocol/types/process/procurement.md
+npm notice 1.9kB skills/protocol/types/process/reviews.md
+npm notice 1.3kB skills/protocol/types/stakeholder/business.md
+npm notice 924B skills/protocol/types/stakeholder/overview.md
+npm notice 1.4kB skills/protocol/types/stakeholder/technical.md
+npm notice Tarball Details
+npm notice name: interf
+npm notice version: 2.1.0
+npm notice filename: interf-2.1.0.tgz
+npm notice package size: 26.4 kB
+npm notice unpacked size: 97.5 kB
+npm notice shasum: 06a6b284df1791b6ed06c8bac1767c315d0ba696
+npm notice integrity: sha512-lObEN0MVi3G/0[...]td0b6xB07H+BA==
+npm notice total files: 84
+npm notice
+npm notice Publishing to https://registry.npmjs.org/ with tag latest and public access
+Authenticate your account at:
+https://www.npmjs.com/auth/cli/f7789ebf-8b3c-4e3a-a548-98e8afff087a
+Press ENTER to open in the browser...
+
++ interf@2.1.0
+➜  bordeaux git:(gedossman

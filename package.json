@@ -1,0 +1,61 @@
+{
+  "name": "interf",
+  "version": "2.3.4",
+  "description": "Agent Onboarding Protocol — declare what you need from enterprise, preview rollouts, publish to registry",
+  "type": "module",
+  "bin": {
+    "interf": "dist/bin.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "bash scripts/sync-canonical.sh && tsc && chmod 755 dist/bin.js",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sync-protocol": "git submodule update --remote protocol",
+    "prepublishOnly": "npm run sync-protocol && npm run build",
+    "sync-canonical": "bash scripts/sync-canonical.sh"
+  },
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "protocol/skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "interf",
+    "agent-onboarding",
+    "onboarding-protocol",
+    "enterprise",
+    "onboarding-contract",
+    "skills",
+    "coding-agents",
+    "rollout",
+    "dependencies"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/interf-labs/cli.git"
+  },
+  "homepage": "https://interf.com",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "yaml": "^2.7.1",
+    "yargs": "^17.7.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/yargs": "^17.0.33",
+    "typescript": "^5.8.3",
+    "vitest": "^4.0.18"
+  }
+}
