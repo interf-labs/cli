@@ -3,7 +3,6 @@ import { z } from "zod";
 export const RequirementSchema = z.object({
   what: z.string().min(1, "Requirement 'what' is required"),
   ready: z.string().min(1, "Requirement 'ready' criteria is required"),
-  canonical: z.string().optional(),
 });
 
 export const ManifestSchema = z.object({
