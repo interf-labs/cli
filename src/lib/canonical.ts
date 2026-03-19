@@ -1,7 +1,6 @@
 /**
- * Auto-generated from canonical-dependencies frontmatter.
- * Source of truth: the `id:` field in each type markdown file.
- * DO NOT EDIT — run `npm run sync-canonical` to regenerate.
+ * Canonical dependency types for the Enterprise Readiness Protocol.
+ * Update manually when new types are added.
  */
 
 export const CANONICAL_TYPES = [

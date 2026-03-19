@@ -8,13 +8,11 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "build": "bash scripts/sync-canonical.sh && tsc && chmod 755 dist/bin.js",
+    "build": "tsc && chmod 755 dist/bin.js",
     "dev": "tsc --watch",
     "test": "vitest run",
     "test:watch": "vitest",
-    "sync-protocol": "git submodule update --remote protocol",
-    "prepublishOnly": "npm run sync-protocol && npm run build",
-    "sync-canonical": "bash scripts/sync-canonical.sh"
+    "prepublishOnly": "npm run sync-protocol && npm run build"
   },
   "typings": "dist/index.d.ts",
   "files": [
