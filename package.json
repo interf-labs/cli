@@ -1,6 +1,6 @@
 {
   "name": "interf",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Enterprise Readiness Protocol \u2014 validate readiness contracts, publish to registry, preview enterprise rollouts",
   "type": "module",
   "bin": {
@@ -12,7 +12,7 @@
     "dev": "tsc --watch",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepublishOnly": "npm run sync-protocol && npm run build"
+    "prepublishOnly": "npm run build"
   },
   "typings": "dist/index.d.ts",
   "files": [
